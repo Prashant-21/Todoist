@@ -15,13 +15,16 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./style.css" />
-    <!-- <script src="./app.js" async></script> -->
-    <script src="./script.js" async></script>
+    <script src="./app.js" async></script>
+    <script src="./test.js" async></script>
+    <!-- <script src="./script.js" async></script> -->
   </head>
   <body>
     <h1>TODO</h1>
     <form action="/note">
       <input type="text" name="inputNotes" class="todo-input" id="inputNotes" />
+      <input type="date" name="date" class="date" id="date" />
+      <input type="time" id="time" name="time" placeholder="Time⌛:" />
       <button type="submit" class="todo-button">
         <i class="fas fa-plus-square"></i>
       </button>
