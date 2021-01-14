@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  /* background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%); */
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
   background-color: black;
   color: white;
   font-family: "Poppins", sans-serif;
@@ -26,20 +26,27 @@ form {
   color: red;
   font-family: cursive, Impact, "Arial Narrow Bold", sans-serif;
 }
+form {
+  display: flex;
+  flex-direction: column;
+}
 form input,
 form button {
   padding: 0.5rem;
   font-size: 2rem;
   border: none;
   background: white;
-  /* border-radius: 25px; */
+  width: 60%;
+  border-radius: 7px;
 }
 form input {
-  border-radius: 25px 0 0 25px;
+  /* border-radius: 25px 0 0 25px; */
+  margin-bottom: 0.8px;
+  text-align: center;
 }
 form button {
   color: #ff0000;
-  background: #f7fffe;
+  background: rgba(255, 255, 255, 0.2);
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -60,6 +67,7 @@ form button:hover {
 
 .todo {
   margin: 0.5rem;
+  margin-bottom: 0;
   background: white;
   font-size: 1.5rem;
   color: black;
@@ -73,7 +81,7 @@ form button:hover {
 .filter-todo {
   padding: 1rem;
   /*  */
-  border-radius: 25px;
+  border-radius: 9px;
 }
 .todo li {
   flex: 1;
@@ -92,7 +100,7 @@ form button:hover {
   background: rgb(11, 212, 162);
 }
 .todo-item {
-  padding: 0rem 0.5rem;
+  padding: 0rem 1rem;
 }
 
 .fa-trash,
@@ -108,6 +116,30 @@ form button:hover {
 .completed {
   text-decoration: line-through;
   opacity: 0.5;
+}
+
+/* Styles for deadline container */
+div.container {
+  background-color: rgb(255, 111, 71);
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-auto-rows: minmax(20px, auto);
+  text-align: center;
+  grid-template-areas:
+    "head head"
+    "time date";
+  border-radius: 20px;
+  color: black;
+}
+#deadline {
+  grid-area: head;
+}
+#time {
+  grid-area: time;
+}
+#date {
+  grid-area: date;
 }
 
 /*CUSTOM SELECTOR */
@@ -152,6 +184,20 @@ select {
   }
   */
 
+footer {
+  color: black;
+  font-weight: bolder;
+  text-align: center;
+  height: 3rem;
+  padding: 3rem;
+  width: 100%;
+}
+footer a {
+  text-decoration: none;
+  color: rgb(255, 0, 0);
+  font-weight: bolder;
+}
+
 @media only screen and (max-width: 700px) {
   body {
     background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
@@ -164,13 +210,18 @@ select {
     width: 95%;
   }
   form {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+      flex-direction: column; */
     align-items: stretch;
     text-align: center;
-    max-width: 88%;
+    width: 100%;
     margin: auto;
     padding: 10px;
+  }
+  form input,
+  form button {
+    width: 100%;
+    margin: 0.5px auto;
   }
   input.todo-input {
     border-radius: 30px 30px 0 0;
@@ -178,12 +229,15 @@ select {
   }
   button.todo-button {
     border-radius: 0 0 30px 30px;
-    margin: 1px;
+    /* margin: 1px; */
     background-color: rgba(0, 0, 0, 0.05);
   }
   div.select {
     min-width: fit-content;
     margin: 10px auto;
     border-radius: 30px;
+  }
+  .container {
+    width: 100%;
   }
 }

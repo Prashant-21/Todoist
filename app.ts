@@ -162,3 +162,4 @@ function removeLocalTodo(todo) {
   // Update the local storage array which this new todos array
   localStorage.setItem("todos", JSON.stringify(todos));
 }
+console.log(new Date());
