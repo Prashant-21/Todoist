@@ -2,12 +2,7 @@
 Simple *To-Do List✔* feature developed using **JavaScript/TypeScript**👨‍ on **VS Code**💻. 
 <hr>
 <br>
-<p float="left" align="center">
-  <img src="./demo/desktopToDo.jpg" height="180"/>
-  <img src="./demo/completedToDo.jpg" height="180px"/>  
-</p>
-<hr>
-<p float="center" align="center">
-  <img float="center" src="./demo/mobileToDo.jpg" height="300px"/> 
-</p>
+
+![Todoist1](https://user-images.githubusercontent.com/72202929/206855346-e1285efc-cadb-493e-8b46-6a2a8bdff056.png)
+
 <hr>
